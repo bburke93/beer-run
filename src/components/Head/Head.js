@@ -4,7 +4,7 @@ import './Head.css';
 class Head extends Component{
   render(){
     return(
-      <div className="container">
+      <div>
         <header className="head">
           <h1>&#127866; Beer Run</h1>
           <nav className="menu">

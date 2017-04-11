@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+     <div className="main">
+      <div className="constrain">
+        <p>Lorem ipsum dolor sit amet, 
+        consectetur adipisicing elit. 
+        Consequatur blanditiis eaque consequuntur perferendis 
+        sapiente vero error, suscipit voluptatibus, 
+        officia id similique aspernatur magnam alias in 
+        placeat neque est delectus harum?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat delectus laboriosam ad debitis id, quaerat suscipit atque velit temporibus veniam obcaecati voluptate, consequuntur explicabo illum. Reprehenderit impedit voluptates, numquam maiores.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod nulla fugiat fugit facere deserunt! Quis laudantium soluta voluptatibus, ullam architecto suscipit in incidunt maxime doloribus, nihil dolorum, voluptatum necessitatibus libero?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit quam saepe atque ad praesentium eius ab omnis vel numquam itaque! Temporibus sunt laborum aliquam, perspiciatis incidunt excepturi perferendis dicta cum.</p>
       </div>
-    );
+     </div> 
+    )
   }
 }
 
