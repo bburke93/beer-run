@@ -14,6 +14,11 @@ class FindBeer extends Component{
 
   action({value}){
     beerMap(value)
+      .then(res => {
+        if(res[0].id == null){
+          return Promise.reject();
+        }
+      })
       .then(res => res[0])
       .then(res => ({
         name: res.name,
@@ -35,7 +40,9 @@ class FindBeer extends Component{
           <h1>Search by city and state.</h1>
           <Form submitAction={this.action} />
           {
-            this.state.locs.map((loc,key) => <Display {...loc} key={key} />)
+            this.state.locs.length ?  
+            this.state.locs.map((loc,key) => <Display {...loc} key={key} />):
+            <div>No results found</div>
           }
         </div>
       </div>
