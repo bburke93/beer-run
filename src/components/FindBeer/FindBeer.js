@@ -10,10 +10,10 @@ class FindBeer extends Component{
     const defaultState = { locs: [], isNull: false };
     this.storageKey = 'beerLocations';
     this.state = defaultState;
-    //this.state = JSON.parse(localStorage.getItem(this.storageKey)) || defaultState;
   }
 
   action({value}){
+    const LimitTo = n => arr => arr.slice(0,n);
     beerMap(value)
       .then(res => {
         if(res[0].id == null){
@@ -25,17 +25,18 @@ class FindBeer extends Component{
         }
         return res;
       })
-      .then(res => res[0])
-      .then(res => ({
-        name: res.name,
-        category: res.status,
-        address: res.street,
-        cityState: res.city + ', ' + res.state
-      }))
+      .then(res => [...LimitTo(10)(res)])
+      .then(res => res.map(beer=>({
+        name: beer.name,
+        category: beer.status,
+        address: beer.street,
+        cityState: beer.city + ', ' + beer.state,
+        link: beer.reviewlink,
+        phone: beer.phone
+      })))
       .then(res => {
         this.setState(state => ({
-          locs: [res],
-          //locs: [res, ...state.locs],
+          locs: [...res],
           isNull: false
         }));
         sessionStorage.setItem(this.storageKey, JSON.stringify(this.state));
@@ -51,7 +52,7 @@ class FindBeer extends Component{
           {
             this.state.isNull === false ?  
             this.state.locs.map((loc,key) => <Display {...loc} key={key} />):
-            <div>No results found</div>
+            <div><br/>No results found</div>
           }
         </div>
       </div>

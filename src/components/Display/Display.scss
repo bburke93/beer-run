@@ -1,0 +1,15 @@
+.tile{
+  border-radius: 0.5em;
+  background-image: url(tileBackground.jpg);
+  background-size: 103% 103%;
+  background-origin: content-box;
+  background-position: center;
+  background-clip: content-box;
+  margin: auto;
+  max-width: 650px;
+ 
+  a{
+    color: black;
+  }
+
+}
