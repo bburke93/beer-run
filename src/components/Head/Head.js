@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { browserHistory } from 'react-router';
+import { hashHistory } from 'react-router';
 import './Head.css';
 
 class Head extends Component{
@@ -10,11 +10,11 @@ class Head extends Component{
   }
 
   home(){
-    browserHistory.push('/')
+    hashHistory.push('/')
   }
 
   about(){
-    browserHistory.push('/about')
+    hashHistory.push('/about')
   }
   
   render(){
