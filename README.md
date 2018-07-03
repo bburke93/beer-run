@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 #beer-run
 
-This project accepts user input and returns a list of nearby beer related venues such as brewpubs, breweries, beer bars and more.
+This project accepts user input and returns a list of nearby beer related venues such as brewpubs, breweries, beer bars and more. Project is hosted on GitHub pages at bburke93.github.io/beer-run.
 
 ##install
 
